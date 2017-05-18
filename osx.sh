@@ -78,7 +78,7 @@ defaults write "Apple Global Domain" AppleShowScrollBars -string WhenScrolling
 defaults write "Apple Global Domain" AppleKeyboardUIMode -int 2
 
 # key repeat settings
-defaults write "Apple Global Domain" InitialKeyRepeat -int 10
+defaults write "Apple Global Domain" InitialKeyRepeat -int 15
 defaults write "Apple Global Domain" KeyRepeat -int 1
 defaults write "Apple Global Domain" "InitialKeyRepeat_Level_Saved" -int 6
 defaults write "Apple Global Domain" ApplePressAndHoldEnabled -bool false
