@@ -206,7 +206,6 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Reset / Reload Everything
 # =========================
 
-# Kill the dock
 killall Dock
 killall Safari
 killall -KILL SystemUIServer
