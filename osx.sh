@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# heavily inspired by:
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
 # get the admin password up front
 sudo -v
 
