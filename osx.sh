@@ -186,6 +186,12 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Finder Settings
 # ===============
 
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool truev
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
 # Set Desktop as the default location for new Finder windows
 #defaults write "com.apple.finder" NewWindowTargetPathwWindowTarget -string "PfDe"
 #defaults write "com.apple.finder" NewWindowTargetPath -string "file://${HOME}/"
@@ -200,12 +206,34 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 #defaults write "com.apple.finder" _FXShowPosixPathInTitle -bool true
 
 # Flowview
-#defaults write "com.apple.finder" FXPreferredViewStyle -string "clmv"
+defaults write "com.apple.finder" FXPreferredViewStyle -string "clmv"
 
 # =========================
 # Reset / Reload Everything
 # =========================
 
-killall Dock
-killall Safari
-killall -KILL SystemUIServer
+for app in "Activity Monitor" \
+	"Address Book" \
+	"Calendar" \
+	"cfprefsd" \
+	"Contacts" \
+	"Dock" \
+	"Finder" \
+	"Google Chrome Canary" \
+	"Google Chrome" \
+	"Mail" \
+	"Messages" \
+	"Opera" \
+	"Photos" \
+	"Safari" \
+	"SizeUp" \
+	"Spectacle" \
+	"SystemUIServer" \
+	"Terminal" \
+	"Transmission" \
+	"Tweetbot" \
+	"Twitter" \
+	"iCal"; do
+	killall "${app}" &> /dev/null
+done
+echo "Done. Note that some of these changes require a logout/restart to take effect."
