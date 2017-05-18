@@ -8,8 +8,7 @@ sudo -v
 # =================
 
 # turn it to default to dark
-defaults write “Apple Global Domain” AppleInterfaceStyle -string Dark
-
+defaults write NSGlobalDomain AppleInterfaceStyle Dark
 
 # =============
 # Dock Settings
@@ -140,5 +139,6 @@ defaults write "com.apple.menuextra.clock" IsAnalog -int 0
 # =========================
 
 # Kill the dock
-killall Dock Safari
+killall Dock
+killall Safari
 killall -KILL SystemUIServer
