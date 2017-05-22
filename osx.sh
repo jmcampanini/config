@@ -6,12 +6,14 @@
 # get the admin password up front
 sudo -v
 
+
 # =================
 # Menu Bar Settings
 # =================
 
 # turn it to default to dark
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
+
 
 # =============
 # Dock Settings
@@ -95,6 +97,7 @@ defaults write "Apple Global Domain" WebAutomaticSpellingCorrectionEnabled -int 
 defaults write "com.apple.menuextra.clock" DateFormat -string "EEE MMM d h:mm a"
 defaults write "com.apple.menuextra.clock" FlashDateSeparators -int 0
 defaults write "com.apple.menuextra.clock" IsAnalog -int 0
+
 
 # ===============
 # Safari Settings
@@ -182,12 +185,13 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # ask for password right after screen saver
 #defaults write "com.apple.screensaver" askForPasswordDelay -int 0 
 
+
 # ===============
 # Finder Settings
 # ===============
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool truev
+defaults write com.apple.finder AppleShowAllFiles true
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -207,6 +211,13 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Flowview
 defaults write "com.apple.finder" FXPreferredViewStyle -string "clmv"
+
+# =============
+# Mail Settings
+# =============
+
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+
 
 # =========================
 # Reset / Reload Everything
