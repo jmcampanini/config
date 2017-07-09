@@ -40,3 +40,8 @@ alias dc='docker-compose'
 alias drm='docker rm -f $(docker ps -a -q)'
 alias drmi='docker rmi -f $(docker images -q)'
 alias dnrm='docker network rm $(docker network ls -q)'
+
+# Go
+export GOROOT=/usr/local/Cellar/go/1.8.3/libexec
+export GOPATH=~/Code/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
